@@ -1,13 +1,6 @@
 "use client";
 
-import {
-  Box,
-  Text,
-  HStack,
-  Button,
-  Flex,
-  Stack,
-} from "@chakra-ui/react";
+import { Box, Text, HStack, Button, Flex, Stack } from "@chakra-ui/react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import BadgePartneo from "../badge/indeex";
@@ -92,17 +85,23 @@ const StackedCards = () => {
       alignItems="center"
       justifyContent="center"
       position="relative"
-      flexDir={{base: 'column-reverse', md: 'row'}}
-      height={{base: '550px', sm: '650px', md: "354px",}}
+      flexDir={{ base: "column-reverse", md: "row" }}
+      height={{ base: "560px", sm: "650px", md: "354px" }}
       width="100%"
       maxW="1004px"
       margin="0 auto"
       gap={10}
-      
     >
-
       {/* Botones de navegación */}
-      <Stack gap={10} bg='transparent'  transform={{base: "rotate(90deg)", md: "rotate(180deg)"}} position={{base: 'absolute', md: 'relative'}} bottom='-30px' zIndex={10} p={1} >
+      <Stack
+        gap={10}
+        bg="transparent"
+        transform={{ base: "rotate(90deg)", md: "rotate(180deg)" }}
+        position={{ base: "absolute", md: "relative" }}
+        bottom="-30px"
+        zIndex={10}
+        p={1}
+      >
         <Button
           onClick={nextCard}
           border="1px solid #474747"
@@ -118,7 +117,7 @@ const StackedCards = () => {
           onClick={prevCard}
           border="1px solid #474747"
           zIndex="2"
-         // _hover={{ bg: "whiteAlpha.900" }}
+          // _hover={{ bg: "whiteAlpha.900" }}
           aria-label="Previous Card"
         >
           {" "}
@@ -151,15 +150,15 @@ const StackedCards = () => {
             boxShadow={index === currentIndex ? "lg" : "sm"}
             border="1px solid #474747"
           >
-            <HStack flexDir={{base: 'column', md: "row"}}>
+            <HStack flexDir={{ base: "column", md: "row" }}>
               <Stack w="100%">
                 <Text fontSize="2xl" fontWeight="bold" color="white" mb={4}>
                   {card.title}
                 </Text>
-                <Text fontSize="md" color="#656565" maxW="411px" minH='100px'>
+                <Text fontSize="md" color="#656565" maxW="411px" minH="100px">
                   {card.description}
                 </Text>
-                <HStack opacity="40%">
+                <HStack opacity="40%" wrap='wrap'>
                   {card.technologies.map((tech) => (
                     <BadgePartneo key={tech}>{tech}</BadgePartneo>
                   ))}

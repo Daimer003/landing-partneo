@@ -8,7 +8,7 @@ const BadgePartneo = ({ children }: any) => {
       borderRadius="50px"
       border="1px solid #474747"
       fontSize={{base: "12px",md: "16px"}}
-      padding={{base: "6px 14px", md: "10px 24px"}}
+      padding={{base: "4px 14px", md: "10px 24px"}}
     >
       {children}
     </Badge>
