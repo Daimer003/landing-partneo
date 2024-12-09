@@ -2,15 +2,15 @@
 
 import { Box, Text, HStack, Button, Flex, Stack } from "@chakra-ui/react";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import BadgePartneo from "../badge/indeex";
 import { IconRow } from "@/Utils/icons";
 
 const StackedCards = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [progress, setProgress] = useState(0);
+  const animationRef = useRef<number | null>(null);
 
-  // Datos de las tarjetas
   const cards = [
     {
       cover: "/assets/projects/remitt.webp",
@@ -37,45 +37,43 @@ const StackedCards = () => {
       cover: "/assets/projects/payment.webp",
       title: "Crypto Payment Gatewaya",
       description:
-        "We developed our crypto payment gateway for ETH, BSC, MATIC, and TRON networks. Customizable for businesses, it saves clients hundreds of thousands of dollars in developme",
+        "We developed our crypto payment gateway for ETH, BSC, MATIC, and TRON networks. Customizable for businesses, it saves clients hundreds of thousands of dollars in development.",
       technologies: ["#CryptoPayments", "#Gateway", "#Fintech", "#WhiteLabel"],
     },
   ];
 
-  // Manejadores para moverse entre tarjetas
   const prevCard = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? cards.length - 1 : prevIndex - 1
+      prevIndex === cards.length - 1 ? 0 : prevIndex - 1
     );
-    resetProgress();
+    setProgress(0);
   };
-
   const nextCard = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === cards.length - 1 ? 0 : prevIndex + 1
     );
-    resetProgress();
-  };
-
-  const resetProgress = () => {
     setProgress(0);
   };
 
-  // Animación automática con barra de progreso
-  useEffect(() => {
-    const animationInterval = setInterval(() => {
-      nextCard();
-    }, 3000); // Cambia cada 3 segundos
+  const animate = () => {
+    setProgress((prevProgress) => {
+      if (prevProgress >= 100) {
+        nextCard();
+        return 0;
+      }
+      return prevProgress + 0.5;
+    });
 
-    const progressInterval = setInterval(() => {
-      setProgress((prevProgress) =>
-        prevProgress >= 100 ? 0 : prevProgress + (100 / 3000) * 30
-      );
-    }, 30); // Incrementa el progreso cada 30ms
+    animationRef.current = requestAnimationFrame(animate);
+  };
+
+  useEffect(() => {
+    animationRef.current = requestAnimationFrame(animate);
 
     return () => {
-      clearInterval(animationInterval);
-      clearInterval(progressInterval);
+      if (animationRef.current !== null) {
+        cancelAnimationFrame(animationRef.current);
+      }
     };
   }, [currentIndex]);
 
@@ -91,42 +89,41 @@ const StackedCards = () => {
       maxW="1004px"
       margin="0 auto"
       gap={10}
+      mt={20}
     >
-      {/* Botones de navegación */}
+      {/* Navegación */}
       <Stack
         gap={10}
-        bg="transparent"
-        transform={{ base: "rotate(90deg)", md: "rotate(180deg)" }}
-        position={{ base: "absolute", md: "relative" }}
-        bottom="-30px"
+        position={{base: "absolute", md: "relative"}}
+        bottom={{ base: "-40px", md: "auto" }}
+        direction={{ base: "row", md: "column" }}
         zIndex={10}
-        p={1}
       >
-        <Button
-          onClick={nextCard}
-          border="1px solid #474747"
-          zIndex="2"
-          //_hover={{ bg: "whiteAlpha.900" }}
-          aria-label="Next Card"
-          transform="rotate(180deg)"
-        >
-          {" "}
-          <IconRow size="28px" />
-        </Button>
         <Button
           onClick={prevCard}
           border="1px solid #474747"
-          zIndex="2"
-          // _hover={{ bg: "whiteAlpha.900" }}
+          bg="transparent"
+          color="white"
+          _hover={{ bg: "gray.700" }}
           aria-label="Previous Card"
+          transform='rotate(180deg)'
         >
-          {" "}
+          <IconRow size="28px" />
+        </Button>
+        <Button
+          onClick={nextCard}
+          border="1px solid #474747"
+          bg="transparent"
+          color="white"
+          _hover={{ bg: "gray.700" }}
+          aria-label="Next Card"
+        >
           <IconRow size="28px" />
         </Button>
       </Stack>
 
       {/* Tarjetas */}
-      <Box position="relative" width="100%" height="100%" overflow="hidden">
+      <Box position="relative" width="100%" height="100%" overflow="hidden" >
         {cards.map((card, index) => (
           <Box
             key={index}
@@ -146,42 +143,42 @@ const StackedCards = () => {
             flexDirection="column"
             justifyContent="center"
             alignItems="center"
-            mt={index === currentIndex ? 10 : 0}
-            boxShadow={index === currentIndex ? "lg" : "sm"}
+            boxShadow={index === currentIndex ? "lg" : "md"}
+            color="white"
             border="1px solid #474747"
           >
-            <HStack flexDir={{ base: "column", md: "row" }}>
-              <Stack w="100%">
+            <HStack flexDir={{ base: "column", md: "row" }} gap={6}>
+              <Stack w="100%" alignItems="center">
                 <Text fontSize="2xl" fontWeight="bold" color="white" mb={4}>
                   {card.title}
                 </Text>
-                <Text fontSize="md" color="#656565" maxW="411px" minH="100px">
+                <Text fontSize="md" color="#aaaaaa" maxW="411px">
                   {card.description}
                 </Text>
-                <HStack opacity="40%" wrap='wrap'>
+                <HStack wrap="wrap" gap={2}>
                   {card.technologies.map((tech) => (
                     <BadgePartneo key={tech}>{tech}</BadgePartneo>
                   ))}
                 </HStack>
               </Stack>
-
-              <Stack w="100%">
+              <Box>
                 <Image
                   src={card.cover}
                   alt={card.title}
                   width={500}
                   height={350}
+                  style={{ borderRadius: "12px" }}
                 />
-              </Stack>
+              </Box>
             </HStack>
           </Box>
         ))}
-        {/* Barra de progreso personalizada */}
+        {/* Barra de progreso */}
         <Box
           width="100%"
           height="2px"
           bg="gray.700"
-          borderRadius="md"
+          borderRadius="full"
           position="absolute"
           bottom="0"
           left="0"
@@ -192,7 +189,7 @@ const StackedCards = () => {
             height="100%"
             width={`${progress}%`}
             bg="white"
-            transition="width 0.03s linear"
+            transition="width 0.1s linear"
           />
         </Box>
       </Box>
