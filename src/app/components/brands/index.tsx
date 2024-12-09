@@ -2,7 +2,7 @@ import { Box, Flex, Image, Text } from "@chakra-ui/react";
 
 const Brands = () => {
   return (
-    <Box py={10} px={5}>
+    <Box py={10} px={3}>
       <Text
         fontSize="xl"
         fontWeight="bold"
@@ -34,13 +34,12 @@ const Brands = () => {
             display="flex"
             justifyContent="center"
             alignItems="center"
-            p={8}
+            p={{base: 4, md: 8}}
             border="1px solid #171616"
-            maxW={{base: "140px", md: "240px"}}
-
+            maxW={{base: "118px", md: "240px"}}
             minH="140px"
           >
-            <Box display="flex" justifyContent="center" w="100%" maxW="180px">
+            <Box display="flex" justifyContent="center" w="100%" >
               <Image
                 src={logo.src}
                 alt={logo.alt}
