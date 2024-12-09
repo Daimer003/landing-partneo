@@ -12,7 +12,7 @@ interface LinkItemProps {
   props?: any;
 }
 
-const LinkItem = ({ href, path, target, children }: LinkItemProps) => {
+const LinkItem = ({ href, target, children }: LinkItemProps) => {
   return (
     <Link href={href} passHref target={target}>
       <Box p={2} gap="5px" color="white" bg="none" fontWeight="500">
@@ -32,6 +32,7 @@ const Navbar = () => {
       width="100%"
       maxW="1440px"
       height="80px"
+      top={0}
       bg="#00000095"
       css={{ backdropFilter: "blur(10px)" }}
       zIndex={99}
