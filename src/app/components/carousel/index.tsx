@@ -94,7 +94,7 @@ const StackedCards = () => {
       {/* Navegación */}
       <Stack
         gap={10}
-        position={{base: "absolute", md: "relative"}}
+        position={{ base: "absolute", md: "relative" }}
         bottom={{ base: "-50px", md: "auto" }}
         direction={{ base: "row", md: "column" }}
         zIndex={10}
@@ -106,7 +106,7 @@ const StackedCards = () => {
           color="white"
           _hover={{ bg: "gray.700" }}
           aria-label="Previous Card"
-          transform={{base: 'rotate(90deg)', md: 'rotate(180deg)'}}
+          transform={{ base: "rotate(90deg)", md: "rotate(180deg)" }}
         >
           <IconRow size="28px" />
         </Button>
@@ -117,14 +117,14 @@ const StackedCards = () => {
           color="white"
           _hover={{ bg: "gray.700" }}
           aria-label="Next Card"
-          transform={{base: 'rotate(270deg)', md: 'rotate(180deg)'}}
+          transform={{ base: "rotate(270deg)", md: "rotate(180deg)" }}
         >
           <IconRow size="28px" />
         </Button>
       </Stack>
 
       {/* Tarjetas */}
-      <Box position="relative" width="100%" height="100%" overflow="hidden" >
+      <Box position="relative" width="100%" height="100%" overflow="hidden">
         {cards.map((card, index) => (
           <Box
             key={index}
@@ -138,6 +138,7 @@ const StackedCards = () => {
             transform={`scale(${index === currentIndex ? 1 : 0.9})`}
             transition="all 0.4s ease-in-out"
             zIndex={index === currentIndex ? 1 : 0}
+            bg='black'
             borderRadius="18px 18px 0 0"
             padding="20px"
             display="flex"
@@ -149,7 +150,7 @@ const StackedCards = () => {
             border="1px solid #474747"
           >
             <HStack flexDir={{ base: "column", md: "row" }} gap={6}>
-              <Stack w="100%" p={{base: '10px', md: '20px'}}>
+              <Stack w="100%" p={{ base: "10px", md: "20px" }}>
                 <Text fontSize="2xl" fontWeight="bold" color="white" mb={4}>
                   {card.title}
                 </Text>
@@ -194,6 +195,8 @@ const StackedCards = () => {
           />
         </Box>
       </Box>
+
+      <Box display="flex" contain='c' w="100%" h="auto" backgroundImage='/assets/path-line.webp' position='absolute' bottom={0}  bg='red' zIndex={10}/>
     </Flex>
   );
 };

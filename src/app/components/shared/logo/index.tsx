@@ -5,12 +5,15 @@ import Link from "next/link";
 const LogoNav = () => {
   return (
     <Link href="/" scroll={false}>
-      <Box w="100%" maxW={{base: "180px", md: "249px"}}>
+      <Box w="100%" h='31px'>
         <Image
           src="/assets/logo.webp"
           alt="Logo de partneos"
-          width={300}
+          width={160}
           height={100}
+          style={{
+            width: "100%"
+          }}
         />
       </Box>
     </Link>

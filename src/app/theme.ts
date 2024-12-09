@@ -16,5 +16,8 @@ export const system = createSystem(defaultConfig, {
       "--content-height": "calc(100dvh - var(--header-height))",
       "--font-poppins": "Poppins, sans-serif", 
     },
+    "*": {
+      boxSizing: "border-box",
+    },
   },
 })

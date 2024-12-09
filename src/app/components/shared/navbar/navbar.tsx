@@ -1,8 +1,8 @@
 "use client";
 import { Box, HStack, Spacer } from "@chakra-ui/react";
 import Logo from "../logo";
-import NextLink from "next/link";
 import ButtonGlobal from "../../button";
+import Link from "next/link";
 
 interface LinkItemProps {
   href: string;
@@ -12,46 +12,38 @@ interface LinkItemProps {
   props?: any;
 }
 
-const LinkItem = ({
-  href,
-  path,
-  target,
-  children,
-  ...props
-}: LinkItemProps) => {
+const LinkItem = ({ href, path, target, children }: LinkItemProps) => {
   return (
-    <NextLink href={href} passHref target={target}>
-      <Box
-        p={2}
-        width="100%"
-        display="inline-flex"
-        alignItems="center"
-        gap="5px"
-        color="white"
-        {...props}
-      >
+    <Link href={href} passHref target={target}>
+      <Box p={2} gap="5px" color="white" bg="none" fontWeight="500">
         {children}
       </Box>
-    </NextLink>
+    </Link>
   );
 };
 
-const Navbar = (props: any) => {
+const Navbar = () => {
   return (
     <Box
       as="nav"
       display="flex"
-      width="100%"
       alignItems="center"
-      padding="24px"
-      boxSizing="border-box"
-      boxSize="border-box"
+      justifyContent="center"
+      width="100%"
+      maxW="1440px"
+      height="80px"
       bg="#00000095"
       css={{ backdropFilter: "blur(10px)" }}
-      zIndex={2}
-      borderBottom="1px solid #201f1f79 "
+      zIndex={99}
+      borderBottom="1px solid #201f1f79"
+      position="fixed"
+      p="0 16px"
     >
-      <HStack w="100%" display={{ base: "none", lg: "flex" }} spaceX={3}>
+      <HStack
+        display={{ base: "none", lg: "flex" }}
+        spaceX={3}
+        bg="transparent"
+      >
         <LinkItem href="" path="">
           About Us
         </LinkItem>
@@ -66,10 +58,10 @@ const Navbar = (props: any) => {
         </LinkItem>
       </HStack>
 
-      <Spacer />
+      <Spacer bg="transparent" />
 
-      <HStack justifyContent="end" w="100%" gap={5}>
-          <ButtonGlobal>Contact Us</ButtonGlobal>
+      <HStack gap={5} align="center">
+        <ButtonGlobal>Contact Us</ButtonGlobal>
         <Logo />
       </HStack>
     </Box>

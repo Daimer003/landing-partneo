@@ -9,8 +9,12 @@
 
 html,
 body {
+  background: #000000;
+  margin: 0;
+  padding: 0;
   max-width: 100vw;
   overflow-x: hidden;
+
 }
 
 body {
@@ -23,7 +27,6 @@ body {
 
 * {
   box-sizing: border-box;
-  background: #000000;
   padding: 0;
   margin: 0;
 }
@@ -42,4 +45,3 @@ a {
   font-weight: bold;
 
 }
-
