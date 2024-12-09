@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.variable}`}>
         <Providers>
-          <Box display="flex" w="100%" justifyContent="center" >
+          <Box as="main" display="flex" w="100%" justifyContent="center">
             <Box w="100%" maxW="1440px">
               <Navbar />
               {children}

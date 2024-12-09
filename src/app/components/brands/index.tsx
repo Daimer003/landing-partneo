@@ -39,7 +39,7 @@ const Brands = () => {
             maxW={{base: "118px", md: "240px"}}
             minH="140px"
           >
-            <Box display="flex" justifyContent="center" w="100%" >
+            <Box display="flex" justifyContent="center" w="100%" minW='84px'>
               <Image
                 src={logo.src}
                 alt={logo.alt}

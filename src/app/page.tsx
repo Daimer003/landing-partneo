@@ -1,4 +1,4 @@
-import { VStack } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import Header from "./components/header";
 import Partneo from "./components/partneo";
 import Service from "./components/Service/service";
@@ -7,12 +7,11 @@ import Brands from "./components/brands";
 
 export default function Home() {
   return (
-    <VStack
-      as="main"
+    <Box
       w="100%"
       h="auto"
       display="flex"
-
+      flexDir='column'
       alignItems="center"
       gap={{base: 20, md: 40}}
     >
@@ -21,6 +20,6 @@ export default function Home() {
       <Service />
       <Stories />
       <Brands />
-    </VStack>
+    </Box>
   );
 }

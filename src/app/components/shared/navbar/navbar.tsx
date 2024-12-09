@@ -39,6 +39,7 @@ const LinkItem = ({
 const Navbar = (props: any) => {
   return (
     <Box
+      as="nav"
       display="flex"
       width="100%"
       alignItems="center"
@@ -68,13 +69,7 @@ const Navbar = (props: any) => {
       <Spacer />
 
       <HStack justifyContent="end" w="100%" gap={5}>
-        <LinkItem
-          path=""
-          href="https://api.whatsapp.com/send/?phone=573206219529&text=Hi%2C+I%E2%80%99d+love+to+start+my+project+with+Partneo%21&type=phone_number&app_absent=0"
-          target="_blank"
-        >
           <ButtonGlobal>Contact Us</ButtonGlobal>
-        </LinkItem>
         <Logo />
       </HStack>
     </Box>
