@@ -1,19 +1,26 @@
-import { Box, Text } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
+import Header from "./components/header";
+import Partneo from "./components/partneo";
+import Service from "./components/Service/service";
+import Stories from "./components/stories";
+import Brands from "./components/brands";
 
 export default function Home() {
   return (
-    <Box
+    <VStack
       as="main"
       w="100%"
-      h="100vh"
+      h="auto"
       display="flex"
-      justifyContent="center"
+
       alignItems="center"
+      gap={{base: 20, md: 40}}
     >
-      <Text fontSize="6xl" color="white">
-        {" "}
-        Partneo{" "}
-      </Text>
-    </Box>
+      <Header />
+      <Partneo /> 
+      <Service />
+      <Stories />
+      <Brands />
+    </VStack>
   );
 }

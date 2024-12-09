@@ -1,5 +1,5 @@
 "use client";
-import { Box, HStack, Spacer, Stack } from "@chakra-ui/react";
+import { Box, HStack, Spacer } from "@chakra-ui/react";
 import Logo from "../logo";
 import NextLink from "next/link";
 import ButtonGlobal from "../../button";
@@ -44,13 +44,14 @@ const Navbar = (props: any) => {
       alignItems="center"
       padding="24px"
       boxSizing="border-box"
+      boxSize="border-box"
       bg="#00000095"
       css={{ backdropFilter: "blur(10px)" }}
-      position="fixed"
       zIndex={2}
-      {...props}
+      borderBottom="1px solid #201f1f79 "
+  
     >
-      <HStack w="100%" display="flex" spaceX={3}>
+      <HStack  w="100%" display={{base: 'none', lg:'flex'}} spaceX={3}>
         <LinkItem href="" path="">
           About Us
         </LinkItem>
@@ -64,8 +65,10 @@ const Navbar = (props: any) => {
           Clients
         </LinkItem>
       </HStack>
+      
       <Spacer />
-      <HStack justifyContent='end' w='100%'gap={5}>
+
+      <HStack justifyContent="end" w="100%" gap={5}>
         <ButtonGlobal>Contact Us</ButtonGlobal>
         <Logo />
       </HStack>

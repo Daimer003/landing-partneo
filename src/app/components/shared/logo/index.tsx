@@ -1,11 +1,11 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 
 const LogoNav = () => {
   return (
     <Link href="/" scroll={false}>
-      <Box w="100%" maxW="249px">
+      <Box w="100%" maxW={{base: "180px", md: "249px"}}>
         <Image
           src="/assets/logo.webp"
           alt="Logo de partneos"

@@ -4,16 +4,13 @@ import "./globals.css";
 import { Providers } from "./providers";
 import Navbar from "./components/shared/navbar/navbar";
 import Footer from "./components/shared/footer/footer";
+import { Box, Stack } from "@chakra-ui/react";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const poppins = localFont({
+  src: "./fonts/Poppins-Regular.ttf", // Ruta del archivo de fuente local
+  variable: "--font-poppins", // Variable CSS personalizada
+  weight: "100 900", // Pesos admitidos por la fuente
+  style: "normal", // Estilo (normal o italic)
 });
 
 export const metadata: Metadata = {
@@ -29,11 +26,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${poppins.variable}`}>
         <Providers>
-          <Navbar />
-          {children}
-          <Footer />
+          <Box display="flex" w="100%" justifyContent="center" >
+            <Box w="100%" maxW="1440px">
+              <Navbar />
+              {children}
+              <Footer />
+            </Box>
+          </Box>
         </Providers>
       </body>
     </html>
