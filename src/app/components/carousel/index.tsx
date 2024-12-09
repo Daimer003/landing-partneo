@@ -95,7 +95,7 @@ const StackedCards = () => {
       <Stack
         gap={10}
         position={{base: "absolute", md: "relative"}}
-        bottom={{ base: "-40px", md: "auto" }}
+        bottom={{ base: "-50px", md: "auto" }}
         direction={{ base: "row", md: "column" }}
         zIndex={10}
       >
@@ -106,7 +106,7 @@ const StackedCards = () => {
           color="white"
           _hover={{ bg: "gray.700" }}
           aria-label="Previous Card"
-          transform='rotate(180deg)'
+          transform={{base: 'rotate(90deg)', md: 'rotate(180deg)'}}
         >
           <IconRow size="28px" />
         </Button>
@@ -117,6 +117,7 @@ const StackedCards = () => {
           color="white"
           _hover={{ bg: "gray.700" }}
           aria-label="Next Card"
+          transform={{base: 'rotate(270deg)', md: 'rotate(180deg)'}}
         >
           <IconRow size="28px" />
         </Button>
@@ -148,7 +149,7 @@ const StackedCards = () => {
             border="1px solid #474747"
           >
             <HStack flexDir={{ base: "column", md: "row" }} gap={6}>
-              <Stack w="100%" alignItems="center">
+              <Stack w="100%" p={{base: '10px', md: '20px'}}>
                 <Text fontSize="2xl" fontWeight="bold" color="white" mb={4}>
                   {card.title}
                 </Text>
