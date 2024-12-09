@@ -7,63 +7,69 @@ import {
 } from "@/Utils/icons";
 import { Box, Flex, Text } from "@chakra-ui/react";
 
-
 const Features = () => {
   return (
-    <Box color="white" py={10} >
+    <Box color="white" py={10}>
       <Flex
         direction={{ base: "column", md: "row" }}
         justify="center"
         align="center"
         wrap="wrap"
+        alignItems='end'
       >
-        <Flex w="100%" flexDir="row">
+        <Flex w="100%" flexDir={{base: "column", md: "row"}}    borderBottom="1px solid #171616" >
           {/* Experience */}
-          <Flex flexDir={{base: "column", md: "row"}}justify="center" align="center" w="100%" >
           <Flex
-            direction="column"
+            //flexDir={{ base: "column", md: "row" }}
+            justify="center"
+            align="end"
             w="100%"
-            minH="148px"
-            p={3}
-            borderLeft="1px solid #171616"
-            borderBottom="1px solid #171616"
           >
-            <IconExperience size="28px" />
-            <Text fontSize="lg" fontWeight="bold">
-              Experience
-            </Text>
-            <Text fontSize="sm" color="#656565" maxW="254px">
-              14 years of tech and software expertise for innovative solutions.
-            </Text>
-          </Flex>
+            <Flex
+              direction="column"
+              w="100%"
+              minH="148px"
+              p={3}
+              borderLeft="1px solid #171616"
+              borderBottom="1px solid #171616"
+            >
+              <IconExperience size="28px" />
+              <Text fontSize="lg" fontWeight="bold">
+                Experience
+              </Text>
+              <Text fontSize="sm" color="#656565" maxW="254px">
+                14 years of tech and software expertise for innovative
+                solutions.
+              </Text>
+            </Flex>
 
-          {/* Quality First */}
-          <Flex
-            direction="column"
-            w="100%"
-            minH="148px"
-            p={3}
-            borderLeft="1px solid #171616"
-            borderBottom="1px solid #171616"
-          >
-            <IconQuality size="28px" />
-            <Text fontSize="lg" fontWeight="bold">
-              Quality first
-            </Text>
-            <Text fontSize="sm" color="#656565" maxW="254px">
-              Quality and efficiency are at the heart of every project.
-            </Text>
-          </Flex>
+            {/* Quality First */}
+            <Flex
+              direction="column"
+              w="100%"
+              minH="148px"
+              p={3}
+              borderLeft="1px solid #171616"
+              borderBottom="1px solid #171616"
+            >
+              <IconQuality size="28px" />
+              <Text fontSize="lg" fontWeight="bold">
+                Quality first
+              </Text>
+              <Text fontSize="sm" color="#656565" maxW="254px">
+                Quality and efficiency are at the heart of every project.
+              </Text>
+            </Flex>
           </Flex>
 
           {/* More than Providers */}
           <Flex
             direction="column"
-            w={{base: "100%", md: "45%"}}
+            w={{ base: "100%", md: "45%" }}
             minH="148px"
             p={3}
             borderLeft="1px solid #171616"
-            borderBottom="1px solid #171616"
+           // borderBottom="1px solid #171616"
           >
             <IconMore size="28px" />
             <Text fontSize="lg" fontWeight="bold">
