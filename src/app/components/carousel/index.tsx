@@ -129,7 +129,7 @@ const StackedCards = () => {
             key={index}
             width="100%"
             position="absolute"
-            top="0"
+            top={index === currentIndex ? 10 : 0}
             left="0"
             right="0"
             bottom="0"
