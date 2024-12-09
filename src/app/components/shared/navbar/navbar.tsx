@@ -49,9 +49,8 @@ const Navbar = (props: any) => {
       css={{ backdropFilter: "blur(10px)" }}
       zIndex={2}
       borderBottom="1px solid #201f1f79 "
-  
     >
-      <HStack  w="100%" display={{base: 'none', lg:'flex'}} spaceX={3}>
+      <HStack w="100%" display={{ base: "none", lg: "flex" }} spaceX={3}>
         <LinkItem href="" path="">
           About Us
         </LinkItem>
@@ -65,11 +64,17 @@ const Navbar = (props: any) => {
           Clients
         </LinkItem>
       </HStack>
-      
+
       <Spacer />
 
       <HStack justifyContent="end" w="100%" gap={5}>
-        <ButtonGlobal>Contact Us</ButtonGlobal>
+        <LinkItem
+          path=""
+          href="https://api.whatsapp.com/send/?phone=573206219529&text=Hi%2C+I%E2%80%99d+love+to+start+my+project+with+Partneo%21&type=phone_number&app_absent=0"
+          target="_blank"
+        >
+          <ButtonGlobal>Contact Us</ButtonGlobal>
+        </LinkItem>
         <Logo />
       </HStack>
     </Box>
