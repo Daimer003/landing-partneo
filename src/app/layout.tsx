@@ -4,7 +4,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import Navbar from "./components/shared/navbar/navbar";
 import Footer from "./components/shared/footer/footer";
-import { Box, Stack } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 const poppins = localFont({
   src: "./fonts/Poppins-Regular.ttf", // Ruta del archivo de fuente local
@@ -16,7 +16,7 @@ const poppins = localFont({
 export const metadata: Metadata = {
   title: "Partneo",
   description:
-    "Especialistas en desarrollo de software con tecnología Web3 y Web2 modernas. Diseñamos aplicaciones escalables, seguras y personalizadas que transforman negocios digitales. Innovación, blockchain, y soluciones a medida para tu éxito.s",
+    "Specialists in software development with modern Web3 and Web2 technologies. We design scalable, secure, and customized applications that transform digital businesses. Innovation, blockchain, and tailored solutions for your success.",
 };
 
 export default function RootLayout({
