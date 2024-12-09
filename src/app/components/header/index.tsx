@@ -8,7 +8,7 @@ import BadgePartneo from "../badge/indeex";
 
 const Header = () => {
   return (
-    <Stack w="100%" justifyContent="center" alignItems="center" padding={3} mt={{base: 10, md: '170px'}}>
+    <Stack w="100%" justifyContent="center" alignItems="center" padding={3} mt={{base: '100px', md: '170px'}}>
       <VStack>
         <Box w="100%" maxW={{base: "225px", md: "425px"}}>
           <Image
