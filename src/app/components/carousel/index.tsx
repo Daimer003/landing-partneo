@@ -84,7 +84,7 @@ const StackedCards = () => {
       justifyContent="center"
       position="relative"
       flexDir={{ base: "column-reverse", md: "row" }}
-      height={{ base: "560px", sm: "650px", md: "354px" }}
+      height={{ base: "600px", sm: "650px", md: "354px" }}
       width="100%"
       maxW="1004px"
       margin="0 auto"
