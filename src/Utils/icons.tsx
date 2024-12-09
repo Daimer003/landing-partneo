@@ -202,3 +202,28 @@ export const IconLaunch = ({ size }: Props) => (
     />
   </svg>
 );
+
+export const IconRow = ({ size }: Props) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M15.1675 9.91767L9.64814 15.437L4.1288 9.91767"
+      stroke="white"
+      strokeWidth="1.57695"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M9.64813 4.39833V15.437"
+      stroke="white"
+      strokeWidth="1.57695"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);

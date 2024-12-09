@@ -4,6 +4,7 @@ import Partneo from "./components/partneo";
 import Service from "./components/Service/service";
 import Stories from "./components/stories";
 import Brands from "./components/brands";
+import LastProjects from "./components/lastProjects";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Header />
       <Partneo /> 
       <Service />
+      <LastProjects />
       <Stories />
       <Brands />
     </Box>
