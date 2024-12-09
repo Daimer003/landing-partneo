@@ -2,7 +2,7 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 import BadgePartneo from "../badge/indeex";
 import Image from "next/image";
 
-const TestimonialCard = ({ textBadge, avatar }: any) => {
+const TestimonialCard = ({ textBadge, avatar, name, descripcion }: any) => {
   return (
     <Box
       display="flex"
@@ -34,14 +34,11 @@ const TestimonialCard = ({ textBadge, avatar }: any) => {
         <Box flex="1">
           <Flex align="center" mb={2}>
             <Text fontSize="lg" fontWeight="bold" mr={2}>
-              Victor Acquaroni
+              {name}
             </Text>
           </Flex>
           <Text fontSize="sm" opacity="0.8">
-            I had hired three other companies before, and none delivered what I
-            needed. Partneo got it right. They built our platform faster than I
-            expected, and their attention to detail was amazing. Now I have my
-            own dedicated team with them.
+            {descripcion}
           </Text>
         </Box>
       </Flex>
@@ -51,7 +48,7 @@ const TestimonialCard = ({ textBadge, avatar }: any) => {
         justify="flex-end"
         mt={4}
         position="absolute"
-        bottom="-20px"
+        bottom={{base: "-13px", md: "-20px"}}
         right={5}
       >
         <BadgePartneo>{textBadge}</BadgePartneo>
