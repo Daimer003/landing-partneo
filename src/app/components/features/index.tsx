@@ -42,7 +42,7 @@ const Features = () => {
  </svg>
 `;
 
-  const styleGradientLineBefore  = {
+  const styleGradientLineBefore = {
     content: '""',
     display: "flex",
     width: "20px",
@@ -54,7 +54,7 @@ const Features = () => {
     backgroundSize: "contain",
     position: "absolute",
     left: "-10px",
-    top: "36px",
+    top: "46px",
   };
 
   const styleGradientLineAfter = {
@@ -66,8 +66,8 @@ const Features = () => {
 
     position: "absolute",
     left: "-1px",
-    top: "44px",
-  }
+    top: "54px",
+  };
 
   return (
     <Box color="white" py={10}>
@@ -121,7 +121,7 @@ const Features = () => {
               borderLeft="1px solid #171616"
               borderBottom="1px solid #171616"
               gap={3}
-              position='relative'
+              position="relative"
               _after={styleGradientLineAfter}
               _before={styleGradientLineBefore}
             >
@@ -143,7 +143,7 @@ const Features = () => {
             p={3}
             borderLeft="1px solid #171616"
             gap={3}
-            position='relative'
+            position="relative"
             _after={styleGradientLineAfter}
             _before={styleGradientLineBefore}
             // borderBottom="1px solid #171616"
@@ -168,7 +168,7 @@ const Features = () => {
             p={3}
             borderLeft="1px solid #171616"
             gap={3}
-            position='relative'
+            position="relative"
             _after={styleGradientLineAfter}
             _before={styleGradientLineBefore}
           >
@@ -189,7 +189,7 @@ const Features = () => {
             p={3}
             borderLeft="1px solid #171616"
             gap={3}
-            position='relative'
+            position="relative"
             _after={styleGradientLineAfter}
             _before={styleGradientLineBefore}
           >
