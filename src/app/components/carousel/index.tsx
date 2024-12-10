@@ -44,7 +44,7 @@ const StackedCards = () => {
 
   const prevCard = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === cards.length - 1 ? 0 : prevIndex - 1
+      prevIndex === cards.length + 1 ? 0 : prevIndex - 1
     );
     setProgress(0);
   };
@@ -57,11 +57,11 @@ const StackedCards = () => {
 
   const animate = () => {
     setProgress((prevProgress) => {
-      if (prevProgress >= 100) {
+      if (prevProgress >= 200) {
         nextCard();
         return 0;
       }
-      return prevProgress + 0.5;
+      return prevProgress + .3
     });
 
     animationRef.current = requestAnimationFrame(animate);

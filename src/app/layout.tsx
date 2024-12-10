@@ -7,7 +7,7 @@ import Footer from "./components/shared/footer/footer";
 import { Box } from "@chakra-ui/react";
 
 const poppins = localFont({
-  src: "./fonts/Poppins-Regular.ttf", // Ruta del archivo de fuente local
+  src: "./fonts/Poppins-Regular.ttf", // Ruta del archivo de fuente locals
   variable: "--font-poppins", // Variable CSS personalizada
   weight: "100 900", // Pesos admitidos por la fuente
   style: "normal", // Estilo (normal o italic)
@@ -29,7 +29,7 @@ export default function RootLayout({
       <body className={`${poppins.variable}`}>
         <Providers>
           <Box as="main" w="100vw" display="flex" justifyContent="center">
-            <Box  maxW="1440px" >
+            <Box w="100%" maxW="1440px" boxSize='border-box'>
               <Navbar />
               {children}
               <Footer />
