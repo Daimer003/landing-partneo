@@ -11,6 +11,8 @@ const StackedCards = () => {
   const [progress, setProgress] = useState(0);
   const animationRef = useRef<number | null>(null);
 
+
+
   const cards = [
     {
       cover: "/assets/projects/remitt.webp",
@@ -61,7 +63,7 @@ const StackedCards = () => {
         nextCard();
         return 0;
       }
-      return prevProgress + .3
+      return prevProgress + 0.3;
     });
 
     animationRef.current = requestAnimationFrame(animate);
@@ -76,6 +78,8 @@ const StackedCards = () => {
       }
     };
   }, [currentIndex]);
+
+
 
   return (
     <Flex
@@ -138,7 +142,7 @@ const StackedCards = () => {
             transform={`scale(${index === currentIndex ? 1 : 0.9})`}
             transition="all 0.4s ease-in-out"
             zIndex={index === currentIndex ? 1 : 0}
-            bg='black'
+            bg="black"
             borderRadius="18px 18px 0 0"
             padding="20px"
             display="flex"
@@ -157,7 +161,7 @@ const StackedCards = () => {
                 <Text fontSize="md" color="#aaaaaa" maxW="411px">
                   {card.description}
                 </Text>
-                <HStack wrap="wrap" gap={2} opacity='30%'>
+                <HStack wrap="wrap" gap={2} opacity="30%">
                   {card.technologies.map((tech) => (
                     <BadgePartneo key={tech}>{tech}</BadgePartneo>
                   ))}
@@ -196,7 +200,7 @@ const StackedCards = () => {
         </Box>
       </Box>
 
-      <Box display="flex" contain='c' w="100%" h="auto" backgroundImage='/assets/path-line.webp' position='absolute' bottom={0}  bg='red' zIndex={10}/>
+   
     </Flex>
   );
 };
