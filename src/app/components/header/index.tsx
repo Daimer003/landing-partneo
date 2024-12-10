@@ -57,14 +57,14 @@ const Header = () => {
         <HStack mt={2} spaceX={4}>
           <ButtonGlobal>See our work</ButtonGlobal>
           <Button
-                  w="auto"
-                  p="0px 10px"
-                  bg="black"
-                  color="white"
-                  border='1px solid white'
-                  fontWeight="600"
-                  borderRadius="9px"
-                  fontSize={{ base: "sm", md: "md" }} 
+            w="auto"
+            p="0px 10px"
+            bg="black"
+            color="white"
+            border="1px solid white"
+            fontWeight="600"
+            borderRadius="9px"
+            fontSize={{ base: "sm", md: "md" }}
           >
             Contact Us
           </Button>
