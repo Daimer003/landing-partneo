@@ -117,7 +117,7 @@ const StackedCards = () => {
           color="white"
           _hover={{ bg: "gray.700" }}
           aria-label="Next Card"
-          transform={{ base: "rotate(270deg)", md: "rotate(180deg)" }}
+          transform={{ base: "rotate(270deg)", md: "rotate(0deg)" }}
         >
           <IconRow size="28px" />
         </Button>
@@ -157,7 +157,7 @@ const StackedCards = () => {
                 <Text fontSize="md" color="#aaaaaa" maxW="411px">
                   {card.description}
                 </Text>
-                <HStack wrap="wrap" gap={2}>
+                <HStack wrap="wrap" gap={2} opacity='30%'>
                   {card.technologies.map((tech) => (
                     <BadgePartneo key={tech}>{tech}</BadgePartneo>
                   ))}
