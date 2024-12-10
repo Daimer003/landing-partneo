@@ -11,6 +11,7 @@ const Partneo = () => {
       w="100%"
       justifyContent="center"
       p={3}
+      gap={8}
     >
       <TextComplement brother="/assets/text-partneo.webp">
         Why Us

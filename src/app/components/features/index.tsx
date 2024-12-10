@@ -8,6 +8,67 @@ import {
 import { Box, Flex, Text } from "@chakra-ui/react";
 
 const Features = () => {
+  const lineGradient = `<svg
+   width="22"
+   height="38"
+   viewBox="0 0 20 37"
+   fill="none"
+   xmlns="http://www.w3.org/2000/svg"
+
+ >
+   <g filter="url(#filter0_f_1_97)">
+     <rect x="8.5" y="8.0166" width="3" height="22" fill="#ffffffb6" />
+   </g>
+   <defs>
+     <filter
+       id="filter0_f_1_97"
+       x="0.5"
+       y="0.0166016"
+       width="21"
+       height="36"
+       filterUnits="userSpaceOnUse"
+       colorInterpolationFilters="sRGB"
+     >
+       <feFlood floodOpacity="0" result="BackgroundImageFix" />
+       <feBlend
+         mode="normal"
+         in="SourceGraphic"
+         in2="BackgroundImageFix"
+         result="shape"
+       />
+       <feGaussianBlur stdDeviation="4" result="effect1_foregroundBlur_1_97" />
+     </filter>
+   </defs>
+ </svg>
+`;
+
+  const styleGradientLineBefore  = {
+    content: '""',
+    display: "flex",
+    width: "20px",
+    height: "40px",
+    backgroundColor: "white",
+    background: `url("data:image/svg+xml;base64, ${btoa(
+      lineGradient
+    )}") no-repeat`,
+    backgroundSize: "contain",
+    position: "absolute",
+    left: "-10px",
+    top: "36px",
+  };
+
+  const styleGradientLineAfter = {
+    content: '""',
+    display: "flex",
+    width: "2px",
+    height: "20px",
+    backgroundColor: "white",
+
+    position: "absolute",
+    left: "-1px",
+    top: "44px",
+  }
+
   return (
     <Box color="white" py={10}>
       <Flex
@@ -15,9 +76,13 @@ const Features = () => {
         justify="center"
         align="center"
         wrap="wrap"
-        alignItems='end'
+        alignItems="end"
       >
-        <Flex w="100%" flexDir={{base: "column", md: "row"}}    borderBottom="1px solid #171616" >
+        <Flex
+          w="100%"
+          flexDir={{ base: "column", md: "row" }}
+          borderBottom="1px solid #171616"
+        >
           {/* Experience */}
           <Flex
             //flexDir={{ base: "column", md: "row" }}
@@ -32,6 +97,10 @@ const Features = () => {
               p={3}
               borderLeft="1px solid #171616"
               borderBottom="1px solid #171616"
+              position="relative"
+              gap={3}
+              _after={styleGradientLineAfter}
+              _before={styleGradientLineBefore}
             >
               <IconExperience size="28px" />
               <Text fontSize="lg" fontWeight="bold">
@@ -51,6 +120,10 @@ const Features = () => {
               p={3}
               borderLeft="1px solid #171616"
               borderBottom="1px solid #171616"
+              gap={3}
+              position='relative'
+              _after={styleGradientLineAfter}
+              _before={styleGradientLineBefore}
             >
               <IconQuality size="28px" />
               <Text fontSize="lg" fontWeight="bold">
@@ -69,7 +142,11 @@ const Features = () => {
             minH="148px"
             p={3}
             borderLeft="1px solid #171616"
-           // borderBottom="1px solid #171616"
+            gap={3}
+            position='relative'
+            _after={styleGradientLineAfter}
+            _before={styleGradientLineBefore}
+            // borderBottom="1px solid #171616"
           >
             <IconMore size="28px" />
             <Text fontSize="lg" fontWeight="bold">
@@ -90,6 +167,10 @@ const Features = () => {
             minH="148px"
             p={3}
             borderLeft="1px solid #171616"
+            gap={3}
+            position='relative'
+            _after={styleGradientLineAfter}
+            _before={styleGradientLineBefore}
           >
             <IconTrusted size="28px" />
             <Text fontSize="lg" fontWeight="bold">
@@ -107,6 +188,10 @@ const Features = () => {
             minH="148px"
             p={3}
             borderLeft="1px solid #171616"
+            gap={3}
+            position='relative'
+            _after={styleGradientLineAfter}
+            _before={styleGradientLineBefore}
           >
             <IconTech size="28px" />
             <Text fontSize="lg" fontWeight="bold">
