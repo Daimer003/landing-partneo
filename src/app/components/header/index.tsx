@@ -1,24 +1,44 @@
-import { Box, VStack, HStack, Stack } from "@chakra-ui/react";
-import Image from "next/image";
+"use client";
+import { Box, VStack, HStack, Stack, Skeleton } from "@chakra-ui/react";
 import Title from "../shared/title";
 import SubTitle from "../shared/SubTitle";
 import Paragrapth from "../shared/paragraph";
 import ButtonGlobal from "../button";
 import BadgePartneo from "../badge/indeex";
+import { LottieAnimation } from "../lottie";
+import { useEffect, useState } from "react";
 
 const Header = () => {
+  const [isLoaded, setIsLoaded] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoaded(false);
+    }, 500);
+  }, []);
+
   return (
-    <Stack w="100%" justifyContent="center" alignItems="center" padding={3} mt={{base: '100px', md: '170px'}}>
+    <Stack
+      w="100%"
+      justifyContent="center"
+      alignItems="center"
+      padding={3}
+      mt={{ base: "100px", md: "170px" }}
+    >
       <VStack>
-        <Box w="100%" maxW={{base: "225px", md: "425px"}}>
-          <Image
-            src="/assets/logo-header.webp"
-            alt="Logo de partneo header"
-            width={500}
-            height={500}
-            style={{
-                maskImage: "linear-gradient(black 40%, transparent)"
-            }}
+        <Box w="100%" maxW={{ base: "225px", md: "425px" }} position="relative">
+          <Skeleton borderRadius="80px 0 80px 0" loading={isLoaded}>
+            <LottieAnimation animation="/assets/json/partneo.json" />
+          </Skeleton>
+          <Box
+            display="flex"
+            contain=""
+            position="absolute"
+            w="100%"
+            h="50%"
+            bottom="0"
+          //  background="rgb(0,0,0)"
+            background="linear-gradient(0deg, rgba(0,0,0,1) 17%, rgba(0,0,0,0.09989933473389356) 72%)"
           />
         </Box>
 
