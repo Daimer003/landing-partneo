@@ -81,7 +81,9 @@ const Footer = () => {
         >
           <VStack zIndex={60} top={0}>
             <Text
-              fontSize="6xl"
+              fontSize={{base: "3xl", md: "6xl"}}
+              textAlign={{base: "center", md: "start"}}
+
               fontWeight="bold"
               mb={2}
               textShadow="1px 1px 20px rgba(255, 255, 255, 0.7)"
