@@ -1,5 +1,5 @@
 "use client";
-import { Box, VStack, HStack, Stack, Skeleton } from "@chakra-ui/react";
+import { Box, VStack, HStack, Stack, Skeleton, Button } from "@chakra-ui/react";
 import Title from "../shared/title";
 import SubTitle from "../shared/SubTitle";
 import Paragrapth from "../shared/paragraph";
@@ -37,7 +37,7 @@ const Header = () => {
             w="100%"
             h="50%"
             bottom="0"
-          //  background="rgb(0,0,0)"
+            //  background="rgb(0,0,0)"
             background="linear-gradient(0deg, rgba(0,0,0,1) 17%, rgba(0,0,0,0.09989933473389356) 72%)"
           />
         </Box>
@@ -56,7 +56,18 @@ const Header = () => {
 
         <HStack mt={2} spaceX={4}>
           <ButtonGlobal>See our work</ButtonGlobal>
-          <ButtonGlobal>Contact</ButtonGlobal>
+          <Button
+                  w="auto"
+                  p="0px 10px"
+                  bg="black"
+                  color="white"
+                  border='1px solid white'
+                  fontWeight="600"
+                  borderRadius="9px"
+                  fontSize={{ base: "sm", md: "md" }} 
+          >
+            Contact Us
+          </Button>
         </HStack>
       </VStack>
     </Stack>
