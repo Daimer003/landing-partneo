@@ -29,6 +29,7 @@ const Brands = () => {
           { src: "/assets/logs/log-11.webp", alt: "Plusvalica" },
           { src: "/assets/logs/log-12.webp", alt: "Nova Strike" },
           { src: "/assets/logs/log-13.webp", alt: "Nova Strike" },
+           { src: "/assets/logs/log-15.webp", alt: "Nova Strike" }, 
         ].map((logo, index) => (
           <Box
             key={index}
@@ -40,7 +41,7 @@ const Brands = () => {
             maxW={{base: "118px", md: "240px"}}
             minH="140px"
           >
-            <Box display="flex" justifyContent="center" w="100%" minW='84px'>
+            <Box display="flex" justifyContent="center" w="100%" minW='74px'>
               <Image
                 src={logo.src}
                 alt={logo.alt}
