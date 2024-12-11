@@ -1,4 +1,4 @@
-import { IconMenu } from "@/Utils/icons";
+import { IconClients, IconMenu, IconProjets, IconServices, IconUs } from "@/Utils/icons";
 import {
   Menu,
   MenuButton,
@@ -10,7 +10,7 @@ import {
 
 const MobileMenu = () => {
   return (
-    <Box display={{ base: "flex", md: "none" }} color="white">
+    <Box display={{ base: "flex", lg: "none" }} color="white">
       <Menu size="full">
         <MenuButton
           color="white‰"
@@ -27,16 +27,16 @@ const MobileMenu = () => {
           }}
         />
         <MenuList bg="black" border="1px solid #525252">
-          <MenuItem bg="black" icon={<IconMenu size="28px" />} >
+          <MenuItem bg="black" icon={<IconUs size="28px" />} >
             About Us
           </MenuItem>
-          <MenuItem bg="black" icon={<IconMenu size="28px" />} >
+          <MenuItem bg="black" icon={<IconServices size="28px" />} >
             Services
           </MenuItem>
-          <MenuItem bg="black" icon={<IconMenu size="28px" />} >
+          <MenuItem bg="black" icon={<IconProjets size="28px" />} >
             Portfolio
           </MenuItem>
-          <MenuItem bg="black" icon={<IconMenu size="28px" />} >
+          <MenuItem bg="black" icon={<IconClients size="28px" />} >
             Clients
           </MenuItem>
         </MenuList>
