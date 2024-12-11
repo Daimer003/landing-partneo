@@ -11,8 +11,6 @@ const StackedCards = () => {
   const [progress, setProgress] = useState(0);
   const animationRef = useRef<number | null>(null);
 
-
-
   const cards = [
     {
       cover: "/assets/projects/remitt.webp",
@@ -45,41 +43,50 @@ const StackedCards = () => {
   ];
 
   const prevCard = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === cards.length + 1 ? 0 : prevIndex - 1
-    );
+    setCurrentIndex((prevIndex) => {
+      // Si el índice es 0, volver al final
+      if (prevIndex <= 0) {
+        return cards.length - 1;
+      }
+      // De lo contrario, retrocede uno
+      return prevIndex - 1;
+    });
     setProgress(0);
   };
+  
   const nextCard = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === cards.length - 1 ? 0 : prevIndex + 1
-    );
+    setCurrentIndex((prevIndex) => {
+      // Si el índice es el último, volver al inicio
+      if (prevIndex >= cards.length - 1) {
+        return 0;
+      }
+      // De lo contrario, avanza uno
+      return prevIndex + 1;
+    });
     setProgress(0);
   };
-
+  
   const animate = () => {
     setProgress((prevProgress) => {
       if (prevProgress >= 200) {
-        nextCard();
+        nextCard(); // Cambia automáticamente a la siguiente carta
         return 0;
       }
       return prevProgress + 0.3;
     });
-
+  
     animationRef.current = requestAnimationFrame(animate);
   };
-
+  
   useEffect(() => {
     animationRef.current = requestAnimationFrame(animate);
-
+  
     return () => {
       if (animationRef.current !== null) {
         cancelAnimationFrame(animationRef.current);
       }
     };
   }, [currentIndex]);
-
-
 
   return (
     <Flex
@@ -94,6 +101,7 @@ const StackedCards = () => {
       margin="0 auto"
       gap={10}
       mt={20}
+      zIndex={99}
     >
       {/* Navegación */}
       <Stack
@@ -199,8 +207,6 @@ const StackedCards = () => {
           />
         </Box>
       </Box>
-
-   
     </Flex>
   );
 };
