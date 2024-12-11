@@ -37,7 +37,7 @@ const StackedCards = () => {
     },
     {
       cover: "/assets/projects/payment.webp",
-      title: "Crypto Payment Gatewaya",
+      title: "Crypto Payment Gateway",
       description:
         "We developed our crypto payment gateway for ETH, BSC, MATIC, and TRON networks. Customizable for businesses, it saves clients hundreds of thousands of dollars in development.",
       technologies: ["#CryptoPayments", "#Gateway", "#Fintech", "#WhiteLabel"],

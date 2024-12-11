@@ -3,7 +3,6 @@ import {
   Flex,
   Grid,
   GridItem,
-  HStack,
   Text,
   VStack,
 } from "@chakra-ui/react";
