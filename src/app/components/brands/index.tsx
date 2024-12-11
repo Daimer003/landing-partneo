@@ -2,7 +2,7 @@ import { Box, Flex, Image, Text } from "@chakra-ui/react";
 
 const Brands = () => {
   return (
-    <Box py={10} px={3}>
+    <Box py={10} px={3} id="brands">
       <Text
         fontSize="xl"
         fontWeight="bold"
@@ -29,19 +29,19 @@ const Brands = () => {
           { src: "/assets/logs/log-11.webp", alt: "Plusvalica" },
           { src: "/assets/logs/log-12.webp", alt: "Nova Strike" },
           { src: "/assets/logs/log-13.webp", alt: "Nova Strike" },
-           { src: "/assets/logs/log-15.webp", alt: "Nova Strike" }, 
+          { src: "/assets/logs/log-15.webp", alt: "Nova Strike" },
         ].map((logo, index) => (
           <Box
             key={index}
             display="flex"
             justifyContent="center"
             alignItems="center"
-            p={{base: 4, md: 8}}
+            p={{ base: 4, md: 8 }}
             border="1px solid #171616"
-            maxW={{base: "118px", md: "240px"}}
+            maxW={{ base: "118px", md: "240px" }}
             minH="140px"
           >
-            <Box display="flex" justifyContent="center" w="100%" minW='74px'>
+            <Box display="flex" justifyContent="center" w="100%" minW="74px">
               <Image
                 src={logo.src}
                 alt={logo.alt}

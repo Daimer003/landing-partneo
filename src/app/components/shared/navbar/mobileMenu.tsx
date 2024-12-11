@@ -9,11 +9,18 @@ import {
 } from "@chakra-ui/react";
 
 const MobileMenu = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <Box display={{ base: "flex", lg: "none" }} color="white">
       <Menu size="full">
         <MenuButton
-          color="white‰"
+          color="white"
           as={IconButton}
           aria-label="Options"
           icon={<IconMenu size="28px" />}
@@ -27,16 +34,32 @@ const MobileMenu = () => {
           }}
         />
         <MenuList bg="black" border="1px solid #525252">
-          <MenuItem bg="black" icon={<IconUs size="28px" />} >
+          <MenuItem
+            onClick={() => scrollToSection("header")}
+            bg="black"
+            icon={<IconUs size="28px" />}
+          >
             About Us
           </MenuItem>
-          <MenuItem bg="black" icon={<IconServices size="28px" />} >
+          <MenuItem
+            onClick={() => scrollToSection("services")}
+            bg="black"
+            icon={<IconServices size="28px" />}
+          >
             Services
           </MenuItem>
-          <MenuItem bg="black" icon={<IconProjets size="28px" />} >
+          <MenuItem
+            onClick={() => scrollToSection("projects")}
+            bg="black"
+            icon={<IconProjets size="28px" />}
+          >
             Portfolio
           </MenuItem>
-          <MenuItem bg="black" icon={<IconClients size="28px" />} >
+          <MenuItem
+            onClick={() => scrollToSection("partners")}
+            bg="black"
+            icon={<IconClients size="28px" />}
+          >
             Clients
           </MenuItem>
         </MenuList>

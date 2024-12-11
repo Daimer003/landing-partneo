@@ -19,6 +19,7 @@ const Header = () => {
 
   return (
     <Stack
+      id="header"
       w="100%"
       justifyContent="center"
       alignItems="center"

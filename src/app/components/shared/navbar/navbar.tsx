@@ -2,28 +2,43 @@
 import { Box, HStack, Spacer } from "@chakra-ui/react";
 import Logo from "../logo";
 import ButtonGlobal from "../../button";
-import Link from "next/link";
 import MobileMenu from "./mobileMenu";
 
 interface LinkItemProps {
-  href: string;
-  path: string;
-  target?: string;
+  id: string; // Cambiado de href a id
   children: React.ReactNode;
-  props?: any;
+  onClick?: () => void;
 }
 
-const LinkItem = ({ href, target, children }: LinkItemProps) => {
+const LinkItem = ({ id, children, onClick }: LinkItemProps) => {
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (onClick) onClick();
+  };
+
   return (
-    <Link href={href} passHref target={target}>
-      <Box p={2} gap="5px" color="white" bg="none" fontWeight="500">
-        {children}
-      </Box>
-    </Link>
+    <Box
+      as="button"
+      onClick={handleClick}
+      p={2}
+      gap="5px"
+      color="white"
+      bg="none"
+      fontWeight="500"
+    >
+      {children}
+    </Box>
   );
 };
 
 const Navbar = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
+
   return (
     <Box
       as="nav"
@@ -44,16 +59,16 @@ const Navbar = () => {
       <MobileMenu />
 
       <HStack display={{ base: "none", lg: "flex" }} bg="transparent">
-        <LinkItem href="" path="">
+        <LinkItem id="header" onClick={() => scrollToSection("header")}>
           About Us
         </LinkItem>
-        <LinkItem href="" path="">
+        <LinkItem id="services" onClick={() => scrollToSection("services")}>
           Services
         </LinkItem>
-        <LinkItem href="" path="">
+        <LinkItem id="projects" onClick={() => scrollToSection("projects")}>
           Portfolio
         </LinkItem>
-        <LinkItem href="" path="">
+        <LinkItem id="partners" onClick={() => scrollToSection("partners")}>
           Clients
         </LinkItem>
       </HStack>

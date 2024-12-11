@@ -6,6 +6,7 @@ import Features from "../features";
 const Partneo = () => {
   return (
     <VStack
+      id="partneo"
       display="flex"
       justifyItems="center"
       w="100%"

@@ -47,7 +47,7 @@ xmlns="http://www.w3.org/2000/svg"
   };
 
   return (
-    <Box display="flex" flexDir="column" w="100%" p={3} position="relative">
+    <Box display="flex" flexDir="column" w="100%" p={3} position="relative"   id="projects">
       <TextComplement brother="/assets/text-ourwork.webp">
         Last Projects
       </TextComplement>
