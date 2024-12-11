@@ -80,7 +80,7 @@ const Footer = () => {
             <Text
               fontSize={{base: "3xl", md: "6xl"}}
               textAlign={{base: "center", md: "start"}}
-
+              color='white'
               fontWeight="bold"
               mb={2}
               textShadow="1px 1px 20px rgba(255, 255, 255, 0.7)"
@@ -88,7 +88,7 @@ const Footer = () => {
             >
               Our Tech Stack
             </Text>
-            <Text fontSize="md" opacity="0.8">
+            <Text fontSize="md" opacity="0.8" color='#656565' maxW='400px' textAlign='center' >
               We leverage the most advanced technologies to bring your vision to
               life.
             </Text>
