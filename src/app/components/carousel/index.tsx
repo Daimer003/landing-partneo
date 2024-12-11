@@ -101,7 +101,7 @@ const StackedCards = () => {
       margin="0 auto"
       gap={10}
       mt={20}
-      zIndex={99}
+      zIndex={30}
     >
       {/* Navegación */}
       <Stack
