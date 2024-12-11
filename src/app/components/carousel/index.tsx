@@ -107,7 +107,7 @@ const StackedCards = () => {
       <Stack
         gap={10}
         position={{ base: "absolute", md: "relative" }}
-        bottom={{ base: "-50px", md: "auto" }}
+        bottom={{ base: "-65px", md: "auto" }}
         direction={{ base: "row", md: "column" }}
         zIndex={10}
       >
