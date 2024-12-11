@@ -16,7 +16,7 @@ export default function Home() {
       alignItems="center"
       gap={{base: 20, md: 40}}
     >
-      <Header />
+      <Header  />
       <Partneo /> 
       <Service />
       <LastProjects />

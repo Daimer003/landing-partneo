@@ -10,7 +10,7 @@ interface LinkItemProps {
   onClick?: () => void;
 }
 
-const LinkItem = ({ id, children, onClick }: LinkItemProps) => {
+const LinkItem = ({  children, onClick }: LinkItemProps) => {
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
     if (onClick) onClick();
