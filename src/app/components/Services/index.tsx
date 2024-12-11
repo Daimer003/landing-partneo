@@ -90,12 +90,14 @@ const Services = () => {
         >
           <IconMore size="28px" />
           <Flex mb={4}>
-            <Text fontSize="sm">Launch MVP in 68 Days</Text>
+            <Text fontSize="sm" color="white">
+              Launch MVP in 68 Days
+            </Text>
           </Flex>
-          <Text fontSize="4xl" fontWeight="500">
+          <Text fontSize="4xl" fontWeight="500" color="white">
             Custom Software
           </Text>
-          <Text fontSize="sm" mt={2} maxW="436px" color="#656565">
+          <Text fontSize="lg" mt={2} maxW="436px" color="#656565" lineHeight='20px'>
             Build solutions tailored to your business needs. Scalable,
             efficient, and designed to help you grow.
           </Text>
@@ -112,12 +114,14 @@ const Services = () => {
         >
           <IconLaunch size="28px" />
           <Flex mb={4}>
-            <Text fontSize="sm">Best Long-Term Solution</Text>
+            <Text fontSize="sm" color="white">
+              Best Long-Term Solution
+            </Text>
           </Flex>
-          <Text fontSize="4xl" fontWeight="500">
+          <Text fontSize="4xl" fontWeight="500" color="white">
             Dedicated Teams
           </Text>
-          <Text fontSize="sm" mt={2} maxW="436px" color="#656565">
+          <Text fontSize="lg" mt={2} maxW="436px" color="#656565">
             Expand your capacity with expert teams focused on delivering results
             for your projects.
           </Text>

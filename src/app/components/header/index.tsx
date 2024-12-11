@@ -27,12 +27,17 @@ const Header = () => {
     >
       <VStack>
         <Box w="100%" maxW={{ base: "225px", md: "425px" }} position="relative">
-          <Skeleton borderRadius="80px 0 80px 0" loading={isLoaded}>
+          <Skeleton
+            borderRadius="80px 0 80px 0"
+            isLoaded={!isLoaded}
+            startColor="#141414"
+            endColor="#2a2a2a"
+          >
             <LottieAnimation animation="/assets/json/partneo.json" />
           </Skeleton>
           <Box
             display="flex"
-            contain=""
+            content=""
             position="absolute"
             w="100%"
             h="50%"
@@ -54,7 +59,7 @@ const Header = () => {
           </Box>
         </Stack>
 
-        <HStack mt={2} spaceX={4}>
+        <HStack mt={2} spacing={4}>
           <ButtonGlobal>See our work</ButtonGlobal>
           <Button
             w="auto"

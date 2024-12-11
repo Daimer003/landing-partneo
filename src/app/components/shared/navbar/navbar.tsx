@@ -3,6 +3,7 @@ import { Box, HStack, Spacer } from "@chakra-ui/react";
 import Logo from "../logo";
 import ButtonGlobal from "../../button";
 import Link from "next/link";
+import MobileMenu from "./mobileMenu";
 
 interface LinkItemProps {
   href: string;
@@ -40,11 +41,9 @@ const Navbar = () => {
       position="fixed"
       p="0 16px"
     >
-      <HStack
-        display={{ base: "none", lg: "flex" }}
-        spaceX={3}
-        bg="transparent"
-      >
+      <MobileMenu />
+
+      <HStack display={{ base: "none", lg: "flex" }} bg="transparent">
         <LinkItem href="" path="">
           About Us
         </LinkItem>

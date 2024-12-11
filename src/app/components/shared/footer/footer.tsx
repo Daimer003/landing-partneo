@@ -33,8 +33,6 @@ const Footer = () => {
     <Box
       color="white"
       px={3}
-      backgroundImage="/assets/footer-bg.webp"
-      backgroundPosition="center"
       mt={20}
       mb={10}
       position="relative"

@@ -55,7 +55,7 @@ xmlns="http://www.w3.org/2000/svg"
 
       <Box
         display="flex"
-        contain='""'
+        content=""
         w="100%"
         h="100%"
         position="absolute"

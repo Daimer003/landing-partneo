@@ -166,7 +166,7 @@ const StackedCards = () => {
                 <Text fontSize="2xl" fontWeight="bold" color="white" mb={4}>
                   {card.title}
                 </Text>
-                <Text fontSize="md" color="#aaaaaa" maxW="411px">
+                <Text fontSize="lg" color="#656565" maxW="411px" lineHeight='20px'>
                   {card.description}
                 </Text>
                 <HStack wrap="wrap" gap={2} opacity="30%">

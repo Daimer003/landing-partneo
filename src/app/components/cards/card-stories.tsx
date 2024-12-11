@@ -33,11 +33,11 @@ const TestimonialCard = ({ textBadge, avatar, name, descripcion }: any) => {
         {/* Información */}
         <Box flex="1">
           <Flex align="center" mb={2}>
-            <Text fontSize="lg" fontWeight="bold" mr={2}>
+            <Text fontSize="lg" fontWeight="bold" mr={2} color="white">
               {name}
             </Text>
           </Flex>
-          <Text fontSize="sm" opacity="0.8">
+          <Text fontSize="lg" opacity="0.8" color="#656565" lineHeight='20px'>
             {descripcion}
           </Text>
         </Box>
@@ -48,7 +48,7 @@ const TestimonialCard = ({ textBadge, avatar, name, descripcion }: any) => {
         justify="flex-end"
         mt={4}
         position="absolute"
-        bottom={{base: "-13px", md: "-20px"}}
+        bottom={{ base: "-13px", md: "-20px" }}
         right={5}
       >
         <BadgePartneo>{textBadge}</BadgePartneo>

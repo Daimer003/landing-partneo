@@ -103,7 +103,7 @@ const Features = () => {
               _before={styleGradientLineBefore}
             >
               <IconExperience size="28px" />
-              <Text fontSize="lg" fontWeight="bold">
+              <Text fontSize="lg" fontWeight="bold" color='white'>
                 Experience
               </Text>
               <Text fontSize="sm" color="#656565" maxW="254px">
@@ -126,7 +126,7 @@ const Features = () => {
               _before={styleGradientLineBefore}
             >
               <IconQuality size="28px" />
-              <Text fontSize="lg" fontWeight="bold">
+              <Text fontSize="lg" fontWeight="bold" color='white'>
                 Quality first
               </Text>
               <Text fontSize="sm" color="#656565" maxW="254px">
@@ -149,7 +149,7 @@ const Features = () => {
             // borderBottom="1px solid #171616"
           >
             <IconMore size="28px" />
-            <Text fontSize="lg" fontWeight="bold">
+            <Text fontSize="lg" fontWeight="bold" color='white'>
               More than providers
             </Text>
             <Text fontSize="sm" color="#656565" maxW="254px">
@@ -173,7 +173,7 @@ const Features = () => {
             _before={styleGradientLineBefore}
           >
             <IconTrusted size="28px" />
-            <Text fontSize="lg" fontWeight="bold">
+            <Text fontSize="lg" fontWeight="bold" color='white'>
               Trusted Relationships
             </Text>
             <Text fontSize="sm" color="#656565" maxW="254px">
@@ -194,7 +194,7 @@ const Features = () => {
             _before={styleGradientLineBefore}
           >
             <IconTech size="28px" />
-            <Text fontSize="lg" fontWeight="bold">
+            <Text fontSize="lg" fontWeight="bold" color='white'>
               Tech Specialization
             </Text>
             <Text fontSize="sm" color="#656565" maxW="254px">
