@@ -4,7 +4,7 @@ import TestimonialCard from "../cards/card-stories";
 
 const Stories = () => {
   return (
-    <Box w="100%" p={3}>
+    <Box w="100%" p={3}  mt='80px'>
       <TextComplement brother="/assets/text-partners.webp">
         Success Stories
       </TextComplement>
