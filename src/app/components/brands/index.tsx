@@ -26,7 +26,7 @@ const Brands = () => {
           { src: "/assets/logs/log-8.webp", alt: "Kryptopia" },
           { src: "/assets/logs/log-9.webp", alt: "LiquidAcre" },
           { src: "/assets/logs/log-10.webp", alt: "Credit Capital" },
-          { src: "/assets/logs/log-11.webp", alt: "Plusvalica" },
+          //{ src: "/assets/logs/log-11.webp", alt: "Plusvalica" },
           { src: "/assets/logs/log-12.webp", alt: "Nova Strike" },
           { src: "/assets/logs/log-13.webp", alt: "Nova Strike" },
           { src: "/assets/logs/log-15.webp", alt: "Nova Strike" },

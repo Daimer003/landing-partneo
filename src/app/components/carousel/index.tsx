@@ -18,6 +18,8 @@ const StackedCards = () => {
       description:
         "We developed all technology for Remitt, a DeFi ecosystem with swaps, affiliate systems, and a staking factory. We connected Web3 and Off-Chain to provide real-time reward reports, fostering an active and transparent community.",
       technologies: ["#DeFi", "#Web3", "#Token", "#3Months"],
+      linkEn: "#",
+      linkEs: "#",
     },
     {
       cover: "/assets/projects/gestia.webp",
@@ -25,6 +27,8 @@ const StackedCards = () => {
       description:
         "We built Gestia’s native app for commercial teams and a web app for partners and administrators. These tools streamline operations and enable microfinance organizations to work efficiently and collaboratively.",
       technologies: ["#Fintech", "#Dashboard", "#App", "#Web2"],
+      linkEn: "#",
+      linkEs: "#",
     },
     {
       cover: "/assets/projects/plusvalica.webp",
@@ -32,6 +36,8 @@ const StackedCards = () => {
       description:
         "We developed the technology powering Plusvalica, a groundbreaking platform for real estate tokenization and real-world assets (RWA). At its core is the SOIL token, representing fiduciary rights within a secure trust. ",
       technologies: ["#Web3 ", "#RWA", "#Token", "#Dashboard"],
+      linkEn: "#",
+      linkEs: "#",
     },
     {
       cover: "/assets/projects/payment.webp",
@@ -39,7 +45,17 @@ const StackedCards = () => {
       description:
         "We developed our crypto payment gateway for ETH, BSC, MATIC, and TRON networks. Customizable for businesses, it saves clients hundreds of thousands of dollars in development.",
       technologies: ["#CryptoPayments", "#Gateway", "#Fintech", "#WhiteLabel"],
+      linkEn: "#",
+      linkEs: "#",
     },
+    // {
+    //   cover: "/assets/projects/payment.webp",
+    //   title: "Landian",
+    //   description: "Descripton",
+    //   technologies: ["#CryptoPayments", "#Gateway", "#Fintech", "#WhiteLabel"],
+    //   linkEn: "https://partneo.notion.site/landian-case-en",
+    //   linkEs: "https://partneo.notion.site/landian-case-es",
+    // },
   ];
 
   const prevCard = () => {
@@ -53,7 +69,7 @@ const StackedCards = () => {
     });
     setProgress(0);
   };
-  
+
   const nextCard = () => {
     setCurrentIndex((prevIndex) => {
       // Si el índice es el último, volver al inicio
@@ -65,7 +81,7 @@ const StackedCards = () => {
     });
     setProgress(0);
   };
-  
+
   const animate = () => {
     setProgress((prevProgress) => {
       if (prevProgress >= 200) {
@@ -74,13 +90,13 @@ const StackedCards = () => {
       }
       return prevProgress + 0.3;
     });
-  
+
     animationRef.current = requestAnimationFrame(animate);
   };
-  
+
   useEffect(() => {
     animationRef.current = requestAnimationFrame(animate);
-  
+
     return () => {
       if (animationRef.current !== null) {
         cancelAnimationFrame(animationRef.current);
@@ -166,7 +182,12 @@ const StackedCards = () => {
                 <Text fontSize="2xl" fontWeight="bold" color="white" mb={4}>
                   {card.title}
                 </Text>
-                <Text fontSize="lg" color="#656565" maxW="411px" lineHeight='20px'>
+                <Text
+                  fontSize="lg"
+                  color="#656565"
+                  maxW="411px"
+                  lineHeight="20px"
+                >
                   {card.description}
                 </Text>
                 <HStack wrap="wrap" gap={2} opacity="30%">
@@ -175,6 +196,7 @@ const StackedCards = () => {
                   ))}
                 </HStack>
               </Stack>
+
               <Box>
                 <Image
                   src={card.cover}
@@ -185,6 +207,35 @@ const StackedCards = () => {
                 />
               </Box>
             </HStack>
+
+            <Stack display='none' position="absolute" right={0} bottom={0} padding={10}>
+              <Button
+                as="a"
+                target="_blank"
+                href={card.linkEs}
+                border="1px solid #474747"
+                bg="#000"
+                color="white"
+                _hover={{ bg: "gray.700" }}
+                aria-label="Next Card"
+                transform={{ base: "rotate(270deg)", md: "rotate(0deg)" }}
+              >
+                View case (ES)
+              </Button>
+              <Button
+                as="a"
+                target="_blank"
+                href={card.linkEn}
+                border="1px solid #474747"
+                bg="#000"
+                color="white"
+                _hover={{ bg: "gray.700" }}
+                aria-label="Next Card"
+                transform={{ base: "rotate(270deg)", md: "rotate(0deg)" }}
+              >
+                View case (EN)
+              </Button>
+            </Stack>
           </Box>
         ))}
         {/* Barra de progreso */}
