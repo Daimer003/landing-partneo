@@ -207,7 +207,7 @@ const StackedCards = () => {
                 />
               </Box>
             </HStack>
-            <Stack display={card.linkEn !='#' ? 'flex': 'none'} position="absolute" right={0} bottom={0} padding={10}>
+            <Stack display={card.linkEn !='#' ? 'flex': 'none'}  position="absolute" right={0} bottom={0} padding={10}>
               <Button
                 as="a"
                 target="_blank"
@@ -217,7 +217,7 @@ const StackedCards = () => {
                 color="white"
                 _hover={{ bg: "gray.700" }}
                 aria-label="Next Card"
-                transform={{ base: "rotate(270deg)", md: "rotate(0deg)" }}
+      
               >
                 View case (ES)
               </Button>
@@ -230,7 +230,6 @@ const StackedCards = () => {
                 color="white"
                 _hover={{ bg: "gray.700" }}
                 aria-label="Next Card"
-                transform={{ base: "rotate(270deg)", md: "rotate(0deg)" }}
               >
                 View case (EN)
               </Button>
