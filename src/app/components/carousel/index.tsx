@@ -48,14 +48,14 @@ const StackedCards = () => {
       linkEn: "#",
       linkEs: "#",
     },
-    // {
-    //   cover: "/assets/projects/payment.webp",
-    //   title: "Landian",
-    //   description: "Descripton",
-    //   technologies: ["#CryptoPayments", "#Gateway", "#Fintech", "#WhiteLabel"],
-    //   linkEn: "https://partneo.notion.site/landian-case-en",
-    //   linkEs: "https://partneo.notion.site/landian-case-es",
-    // },
+    {
+      cover: "/assets/projects/landia.webp",
+      title: "Landian",
+      description: "Landian aimed for a hyper-realistic metaverse but faced technical chaos. Partneo swiftly built its NFT marketplace, blockchain infrastructure, and integrated Wallet Connect with Unreal Engine 5—all within just four months.",
+      technologies: ["#DeFi", "#Web3", "#Metaverse", "#4Months"],
+      linkEn: "https://partneo.notion.site/landian-case-en",
+      linkEs: "https://partneo.notion.site/landian-case-es",
+    },
   ];
 
   const prevCard = () => {
@@ -207,8 +207,7 @@ const StackedCards = () => {
                 />
               </Box>
             </HStack>
-
-            <Stack display='none' position="absolute" right={0} bottom={0} padding={10}>
+            <Stack display={card.linkEn !='#' ? 'flex': 'none'} position="absolute" right={0} bottom={0} padding={10}>
               <Button
                 as="a"
                 target="_blank"
