@@ -27,8 +27,8 @@ const StackedCards = () => {
       description:
         "We built Gestia’s native app for commercial teams and a web app for partners and administrators. These tools streamline operations and enable microfinance organizations to work efficiently and collaboratively.",
       technologies: ["#Fintech", "#Dashboard", "#App", "#Web2"],
-      linkEn: "#",
-      linkEs: "#",
+      linkEn: "https://partneo.notion.site/gestia-en",
+      linkEs: "https://partneo.notion.site/gestia-es",
     },
     {
       cover: "/assets/projects/plusvalica.webp",

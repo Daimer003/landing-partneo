@@ -21,7 +21,7 @@ const Brands = () => {
           { src: "/assets/logs/log-3.webp", alt: "Remitt" },
           { src: "/assets/logs/log-4.webp", alt: "Circle" },
           { src: "/assets/logs/log-5.webp", alt: "Reforest" },
-          { src: "/assets/logs/log-6.webp", alt: "Exchange Americas" },
+          // { src: "/assets/logs/log-6.webp", alt: "Exchange Americas" },
           { src: "/assets/logs/log-7.webp", alt: "OneMind" },
           { src: "/assets/logs/log-8.webp", alt: "Kryptopia" },
           { src: "/assets/logs/log-9.webp", alt: "LiquidAcre" },
